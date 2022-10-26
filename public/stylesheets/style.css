@@ -1,8 +1,16 @@
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #f3f4f6;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.container {
+  padding: 48px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  width: 350px;
 }
