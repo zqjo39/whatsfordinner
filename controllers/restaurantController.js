@@ -53,6 +53,17 @@ module.exports.renderAddForm = function(req, res) {
     res.render('add', {restaurant, categories});
 }
 
+module.exports.addRestaurant = async function(req, res) {
+    await Restaurant.create(
+        {
+            name: req.body.name,
+            category: req.body.category,
+            rating: req.body.rating,
+            image: req.body.image,
+            description: req.body.description
+        });
+    res.redirect('/');
+}
 
 // const restaurants = [{
 //     id: 1,
