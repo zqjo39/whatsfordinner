@@ -13,9 +13,9 @@ mixin restaurantForm(restaurant, actionURL, mode, title)
                             option(value = category selected = (category === restaurant.category)) #{category}
                 div.form-input
                     label(for = 'rating') Rating:
-                        select(id = 'rating' name = 'rating' autocomplete = 'off')
-                            -for(let i = 0; i <= 5; i++)
-                                option(value = i selected = (rating === restaurant.rating)) #{i}
+                    select(id = 'rating' name = 'rating' autocomplete = 'off')
+                        -for (let i = 0; i <= 5; i++)
+                            option(value = i selected = (rating === restaurant.rating)) #{i}
                 div.form-input
                     label(for = 'image') Image URL:
                     input(type = 'text' id = 'image' name = 'image' value = restaurant.image)
@@ -24,6 +24,6 @@ mixin restaurantForm(restaurant, actionURL, mode, title)
                     textarea(id = 'description' name = 'description') #{restaurant.description}
                 div.button-row
                     a.button.cancel(href = '/') Cancel
-                        if (mode === 'edit')
-                            a.button.delete(href = `/delete/${restaurant.id}`) Delete
-                        button.button.save(type = 'submit') Submit
+                    if (mode === 'edit')
+                        a.button.delete(href = `/delete/${restaurant.id}`) Delete
+                    button.button.save(type = 'submit') Submit
